@@ -3,7 +3,7 @@ function MyClockTime() {
   today = today.toLocaleString();
 
   return (
-  <div style={{color:'white'}}>
+  <div style={{color:'black'}}>
   {today}
 </div>
   );

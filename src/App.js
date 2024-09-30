@@ -7,6 +7,7 @@ import MyClock from './02/MyClock' ;
 //import MyList from './04/MyList';
 // import Lotto from './05/Lotto';
 // import FoodMain from './06/FoodMain';
+import BoxOffice from './07/BoxOffice';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         {/* <MyDiv1 /> */}
         {/* <Lotto /> */}
         {/* {<FoodMain />} */}
-        {<MyClock/>}
+        {/* {<MyClock/>} */}
+        {<BoxOffice/>}
       </main>
       <footer className='w-full h-20
                          flex justify-center items-center
