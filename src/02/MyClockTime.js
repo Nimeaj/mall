@@ -1,12 +1,21 @@
-function MyClockTime() {
-  let today = new Date();
-  today = today.toLocaleString();
+import { useState, useEffect } from "react";
 
-  return (
-  <div style={{color:'black'}}>
-  {today}
-</div>
+function MyClockTime() {
+  const [cTime, setCTime] = useState(new Date()) ;
+
+  useEffect(()=>{
+    const tm = setInterval(()=>{
+      setCTime(new Date());
+    }, 1000) ;
+
+    return () => {clearInterval(tm)} ;
+  }, []);
+  return(
+    <div className='w-full flex justify-center items-center
+                    text-2xl font-bold'>
+    { cTime.toLocaleTimeString()}
+    </div>
   );
 }
 
-export default MyClockTime;
+export default MyClockTime ;
