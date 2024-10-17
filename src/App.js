@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa";
 
 // import Hello from './01/Hello' ;
 import MyClock from './02/MyClock' ;
-// import MyDiv1 from './03/MyDiv1';
+import MyDiv1 from './03/MyDiv1';
 //import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import FoodMain from './06/FoodMain';
@@ -14,6 +14,9 @@ import Traffic from './09/Traffic';
 import Gallery from './11/Gallery';
 import Festival from './12/Festival';
 // import RouteMain from './13/RouteMain';
+import Fcst from './14/Fcst';
+import FcstList from './14/FcstList';
+import RecoilMain from './15/RecoilMain';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from "react-router-dom"
 
@@ -29,17 +32,19 @@ function App() {
           K-digital 8기
         </p>
         <ul className="flex justify-center font-bold">
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/02/MyClock'>시계</Link></li>
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/05/Lotto'>로또생성기</Link></li>
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/06/FoodMain'>푸드뱅크</Link></li>
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/07/BoxOffice'>박스오피스</Link></li>
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/09/Traffic'>교통사고</Link></li>
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/11/Gallery'>관광</Link></li>
-          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/12/Festival'>축제</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/MyClock'>시계</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/Lotto'>로또생성기</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/FoodMain'>푸드뱅크</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/BoxOffice'>박스오피스</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/Traffic'>교통사고</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/Gallery'>관광</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/Festival'>축제</Link></li>
+          <li className='mx-4 p-2 hover:bg-blue-200 rounded-md'><Link to ='/Fcst'>일기예보</Link></li>
+
   
         </ul>
         <p className='text-4xl font-bold p-5'>
-          <FaHome />
+        <Link to ='/'><FaHome /></Link>
         </p>
       </header>
       <main className='w-full grow
@@ -58,13 +63,17 @@ function App() {
         {/* <Festival/> */}
         {/* <RouteMain /> */}
         <Routes>
-          <Route path="/02/MyClock" element={<MyClock />} />
-          <Route path="/05/Lotto" element={<Lotto />} />
-          <Route path="/06/FoodMain" element={<FoodMain />} />
-          <Route path="/07/BoxOffice" element={<BoxOffice />} />
-          <Route path="/09/Traffic" element={<Traffic />} />
-          <Route path="/11/Gallery" element={<Gallery />} />
-          <Route path="/12/Festival" element={<Festival />} />
+          <Route path="/MyClock" element={<MyClock />} />
+          <Route path="/Lotto" element={<Lotto />} />
+          <Route path="/FoodMain" element={<FoodMain />} />
+          <Route path="/BoxOffice" element={<BoxOffice />} />
+          <Route path="/Traffic" element={<Traffic />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Festival" element={<Festival />} />
+          <Route path="/Fcst" element={<Fcst />} />
+          <Route path="/FcstList" element={<FcstList />} />
+          <Route path="/MyDiv1" element={<MyDiv1 />} />
+          <Route path="/RecoilMain" element={<RecoilMain />} />
         </Routes>
       </main>
       <footer className='w-full h-20 flex-shrink-0
